@@ -20,11 +20,10 @@ const getSearchedPokemon = async (input) => {
     //    isFirstRender.current = true;
     //}
   };
-}
 
   return (
     <>
-    
+
     </>
   )
 }
