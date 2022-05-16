@@ -1,11 +1,10 @@
-import axios from "axios";
-import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
-//  const isFirstRender = useRef(false);  //
+  //  const isFirstRender = useRef(false);  //
 
   function handleQuery(e) {
     e.preventDefault();
@@ -13,11 +12,11 @@ function Search() {
     navigate("/searched/" + input);
   }
 
-
   return (
     <>
       <form onSubmit={handleQuery}>
         <input
+          name="pokeQuery"
           onChange={(e) => setInput(e.target.value)}
           type="text"
           value={input}
